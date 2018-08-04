@@ -1,4 +1,6 @@
-﻿using System.Threading.Tasks;
+﻿using Discord;
+using System;
+using System.Threading.Tasks;
 
 namespace DiscordBot.NET
 {
@@ -9,6 +11,12 @@ namespace DiscordBot.NET
         public async Task MainAsync()
         {
 
+        }
+
+        private Task Log(LogMessage msg)
+        {
+            Console.WriteLine(msg.ToString());
+            return Task.CompletedTask;
         }
     }
 }
